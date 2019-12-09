@@ -10,7 +10,7 @@ import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
 
-@ClientEndpoint
+@ClientEndpoint(configurator = CustomConfigurator.class)
 public class WebsocketClientEndpoint {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(WebsocketClientEndpoint.class.getName());
